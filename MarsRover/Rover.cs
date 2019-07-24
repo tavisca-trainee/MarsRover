@@ -4,6 +4,6 @@ namespace MarsRover
 {
     public class Rover
     {
-        public Position Position { get; set; }
+        //public Position Position { get; set; }
     }
 }
