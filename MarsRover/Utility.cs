@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MarsRover
 {
-    public enum Direction { W, N, E, S };
+    public enum Direction { W=1, N, E, S };
 
-    public enum Instruction { L = -1, M, R };
+    public enum Instruction { L, M, R };
 }
