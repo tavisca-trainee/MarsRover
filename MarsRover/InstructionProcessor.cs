@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MarsRover
 {
@@ -10,15 +11,21 @@ namespace MarsRover
             new MoveInstruction()
         };
 
-        public bool TryProcessing(char cmd, Rover rover)
+        internal void ProcessInstructionString(string instructions, Rover rover)
+        {
+            foreach (var command in instructions)
+            {
+                TryProcessingEachCommand(command, ref rover);
+            }
+        }
+
+        private void TryProcessingEachCommand(char cmd, ref Rover rover)
         {
             foreach (var instruction in _instructions)
             {
-                if (instruction.TryProcessing(cmd, rover) == true)
-                    return true;
+                if (instruction.TryProcessing(cmd, ref rover) == true)
+                    return;
             }
-
-            return false;
         }
     }
 }
