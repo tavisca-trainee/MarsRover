@@ -5,8 +5,4 @@
     <RootNamespace>MarsRover</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="IInstruction.cs" />
-  </ItemGroup>
-
 </Project>

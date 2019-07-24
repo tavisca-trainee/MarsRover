@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MarsRover
+﻿namespace MarsRover
 {
     public interface IInstruction
     {
-        bool TryParse(char Instruction);
+        char Direction { get; }
+        bool TryProcessing(char instruction, Rover rover);
     }
 }

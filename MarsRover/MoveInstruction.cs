@@ -1,6 +1,6 @@
 ﻿namespace MarsRover
 {
-    public class TurnInstruction: IInstruction
+    public class MoveInstruction: IInstruction
     {
         public char Direction { get; set; }
 
