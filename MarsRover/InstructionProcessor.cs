@@ -8,7 +8,7 @@ namespace MarsRover
     {
         public List<Instruction> Instructions { get; set; }
 
-        public InstructionProcessor()
+        public InstructionProcessor(Rover rover)
         {
             this.Instructions = new List<Instruction>();
         }
@@ -18,6 +18,21 @@ namespace MarsRover
             for (int i = 0; i < instructions.Length; i++)
             {
                 Instructions.Add((Instruction)Enum.Parse(typeof(Instruction), instructions[i].ToString()));
+            }
+        }
+
+        public void PerformProcessing(Rover rover)
+        {
+            foreach (var instruction in Instructions)
+            {
+                if (instruction == Instruction.L || instruction == Instruction.R)
+                {
+                    rover.Compass.ChangeDirection(rover, instruction);
+                }
+                else
+                {
+                    //rover.Mobilizer.Move();
+                }
             }
         }
     }

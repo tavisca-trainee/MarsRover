@@ -11,9 +11,9 @@ namespace MarsRover.Tests
         [Fact]
         public void Instruction_processor_should_be_able_to_receive_instructions()
         {
-            InstructionProcessor instructionProcessor = new InstructionProcessor();
-            instructionProcessor.GetInstructions("LLMRLRMRLRMRRMM");
-            instructionProcessor.Instructions.Should().BeEquivalentTo(new List<Instruction>
+            Rover rover = new Rover("2 3 E");
+            rover.InstructionProcessor.GetInstructions("LLMRLRMRLRMRRMM");
+            rover.InstructionProcessor.Instructions.Should().BeEquivalentTo(new List<Instruction>
             {
                 Instruction.L,
                 Instruction.L,
@@ -32,7 +32,5 @@ namespace MarsRover.Tests
                 Instruction.M
             });
         }
-
-
     }
 }
