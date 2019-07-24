@@ -2,7 +2,8 @@
 
 namespace MarsRover
 {
-    public class Class1
+    public class Rover
     {
+        public Position Position { get; set; }
     }
 }
