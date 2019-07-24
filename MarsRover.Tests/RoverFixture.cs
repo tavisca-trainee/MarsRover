@@ -3,12 +3,12 @@ using Xunit;
 
 namespace MarsRover.Tests
 {
-    public class UnitTest1
+    public class RoverFixture
     {
         [Fact]
-        public void Test1()
+        public void Rover_should_have__valid_co_ordinates()
         {
-
+            
         }
     }
 }
