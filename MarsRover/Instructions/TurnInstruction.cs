@@ -46,13 +46,13 @@ namespace MarsRover
 
         private static void ChangeToDirectionAtNewIndex(ref Rover rover, int directionIndexAfterTurning)
         {
-            rover.Compass.Direction = 
-                Compass._indexToDirectionMap[directionIndexAfterTurning];
+            rover.Compass.Direction =
+                (Directions)directionIndexAfterTurning;
         }
 
         private static int GetCurrentDirectionIndex(ref Rover rover)
         {
-            return Compass._directionToIndexMap[rover.Compass.Direction];
+            return (int)rover.Compass.Direction;
         }
     }
 }

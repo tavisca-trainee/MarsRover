@@ -9,12 +9,12 @@ namespace MarsRover
             'M', 'F'
         };
 
-        private static Dictionary<char, Step> _directionToStepMap { get; } = new Dictionary<char, Step>()
+        private static Dictionary<Directions, Step> _directionToStepMap { get; } = new Dictionary<Directions, Step>()
         {
-            {'E', new Step() { X = 1, Y = 0} },
-            {'S', new Step() { X = 0, Y = -1} },
-            {'W', new Step() { X = -1, Y = 0} },
-            {'N', new Step() { X = 0, Y = 1} }
+            {Directions.E, new Step() { X = 1, Y = 0} },
+            {Directions.S, new Step() { X = 0, Y = -1} },
+            {Directions.W, new Step() { X = -1, Y = 0} },
+            {Directions.N, new Step() { X = 0, Y = 1} }
         };
 
         public bool TryProcessing(char command, ref Rover rover)

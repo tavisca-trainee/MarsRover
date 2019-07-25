@@ -28,7 +28,7 @@ namespace MarsRover
             };
         }
 
-        public void SetDirection(char direction)
+        public void SetDirection(Directions direction)
         {
             Compass = new Compass
             {
@@ -45,7 +45,7 @@ namespace MarsRover
             };
         }
 
-        public char GetDirection()
+        public Directions GetDirection()
         {
             return Compass.Direction;
         }

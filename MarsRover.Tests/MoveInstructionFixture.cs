@@ -36,7 +36,7 @@ namespace MarsRover.Tests
                     MinimumCoordinate = new Position { X = 0, Y = 0 },
                     MaximumCoordinate = new Position { X = 10, Y = 10 }
                 },
-                Compass = new Compass() { Direction = 'E'}
+                Compass = new Compass() { Direction = Directions.E}
             };
 
             var instruction = new MoveInstruction();

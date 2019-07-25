@@ -8,10 +8,10 @@ namespace MarsRover.App
         {
             GetMapCoordinates(out int mapEndX, out int mapEndY);
 
-            GetRoverPositionAndDirection(out int rover1X, out int rover1Y, out char rover1Direction);
+            GetRoverPositionAndDirection(out int rover1X, out int rover1Y, out Directions rover1Direction);
             GetCommand(out string rover1Command);
 
-            GetRoverPositionAndDirection(out int rover2X, out int rover2Y, out char rover2Direction);
+            GetRoverPositionAndDirection(out int rover2X, out int rover2Y, out Directions rover2Direction);
             GetCommand(out string rover2Command);
 
             var rover1 = new Rover()
@@ -52,12 +52,12 @@ namespace MarsRover.App
             y = int.Parse(coordinates[1]);
         }
 
-        static void GetRoverPositionAndDirection(out int x, out int y, out char direction)
+        static void GetRoverPositionAndDirection(out int x, out int y, out Directions direction)
         {
             var info = Console.ReadLine().Split(' ');
             x = int.Parse(info[0]);
             y = int.Parse(info[1]);
-            direction = info[2][0];
+            Enum.TryParse<Directions>(info[2], out direction);
         }
 
         static void GetCommand(out string command)
