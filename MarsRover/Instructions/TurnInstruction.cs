@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MarsRover
 {
@@ -33,15 +34,15 @@ namespace MarsRover
             int indexOfNewDirection =
                 GetCurrentDirectionIndex(ref rover) + _move[turn];
 
-            MapIndexInTheRange0To3(ref indexOfNewDirection);
+            MapIndexToValidRange(ref indexOfNewDirection);
 
             ChangeToDirectionAtNewIndex(ref rover, indexOfNewDirection);
         }
 
-        public static void MapIndexInTheRange0To3(ref int directionIndexAfterTurning)
+        public static void MapIndexToValidRange(ref int directionIndexAfterTurning)
         {
-            directionIndexAfterTurning += 4;
-            directionIndexAfterTurning %= 4;
+            directionIndexAfterTurning += Enum.GetNames(typeof(Directions)).Length;
+            directionIndexAfterTurning %= Enum.GetNames(typeof(Directions)).Length;
         }
 
         private static void ChangeToDirectionAtNewIndex(ref Rover rover, int directionIndexAfterTurning)

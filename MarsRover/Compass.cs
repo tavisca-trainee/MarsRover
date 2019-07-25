@@ -5,7 +5,7 @@ namespace MarsRover
 {
     public enum Directions
     {
-        N, E, S, W
+        N, NE, E, SE, S, SW, W, NW
     }
     public class Compass
     {

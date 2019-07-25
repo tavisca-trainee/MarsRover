@@ -26,26 +26,26 @@ namespace MarsRover.Tests
         [Theory]
         [InlineData(3, 3)]
         [InlineData(0, 0)]
-        [InlineData(-1, 3)]
-        [InlineData(-2, 2)]
-        [InlineData(4, 0)]
-        [InlineData(5, 1)]
-        public void Mapping_in_range_0_to_3_test(int input, int expected)
+        [InlineData(-1, 7)]
+        [InlineData(-2, 6)]
+        [InlineData(4, 4)]
+        [InlineData(5, 5)]
+        public void Mapping_in_valid_range_test(int input, int expected)
         {
-            TurnInstruction.MapIndexInTheRange0To3(ref input);
+            TurnInstruction.MapIndexToValidRange(ref input);
 
             input.Should().Be(expected);
         }
 
         [Theory]
-        [InlineData(Directions.E, 'L', Directions.N)]
-        [InlineData(Directions.E, 'R', Directions.S)]
-        [InlineData(Directions.W, 'L', Directions.S)]
-        [InlineData(Directions.W, 'R', Directions.N)]
-        [InlineData(Directions.N, 'L', Directions.W)]
-        [InlineData(Directions.N, 'R', Directions.E)]
-        [InlineData(Directions.S, 'L', Directions.E)]
-        [InlineData(Directions.S, 'R', Directions.W)]
+        [InlineData(Directions.E, 'L', Directions.NE)]
+        [InlineData(Directions.E, 'R', Directions.SE)]
+        [InlineData(Directions.W, 'L', Directions.SW)]
+        [InlineData(Directions.W, 'R', Directions.NW)]
+        [InlineData(Directions.N, 'L', Directions.NW)]
+        [InlineData(Directions.N, 'R', Directions.NE)]
+        [InlineData(Directions.S, 'L', Directions.SE)]
+        [InlineData(Directions.S, 'R', Directions.SW)]
         public void Valid_move_command_should_turn_rover_test(Directions currentDirection, char command, Directions expectedDirection)
         {
             var rover = new Rover()

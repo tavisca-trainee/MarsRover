@@ -14,7 +14,11 @@ namespace MarsRover
             {Directions.E, new Step() { X = 1, Y = 0} },
             {Directions.S, new Step() { X = 0, Y = -1} },
             {Directions.W, new Step() { X = -1, Y = 0} },
-            {Directions.N, new Step() { X = 0, Y = 1} }
+            {Directions.N, new Step() { X = 0, Y = 1} },
+            {Directions.NE, new Step() { X = 1, Y = 1} },
+            {Directions.SE, new Step() { X = 1, Y = -1} },
+            {Directions.NW, new Step() { X = -1, Y = 1} },
+            {Directions.SW, new Step() { X = -1, Y = -1} },
         };
 
         public bool TryProcessing(char command, ref Rover rover)
