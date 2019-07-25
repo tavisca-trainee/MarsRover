@@ -23,5 +23,10 @@ namespace MarsRover
             this.InstructionProcessor.GetInstructions(instructions);
             this.InstructionProcessor.PerformProcessing(this);
         }
+
+        public void Move()
+        {
+            //write movement logic here.
+        }
     }
 }

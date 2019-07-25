@@ -8,6 +8,9 @@ namespace MarsRover
     {
         public List<Instruction> Instructions { get; set; }
 
+        //sir ka emthod to remove if else id to create a lsit of fucntions to be accessed after the condition checking.
+        //then add tryparse.
+
         public InstructionProcessor(Rover rover)
         {
             this.Instructions = new List<Instruction>();
@@ -29,9 +32,10 @@ namespace MarsRover
                 {
                     rover.Compass.ChangeDirection(rover, instruction);
                 }
-                else
+
+                if (instruction == Instruction.M)
                 {
-                    //rover.Mobilizer.Move();
+                    rover.Move();
                 }
             }
         }

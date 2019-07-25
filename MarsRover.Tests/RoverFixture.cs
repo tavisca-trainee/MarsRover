@@ -19,5 +19,13 @@ namespace MarsRover.Tests
             Rover rover = new Rover("2 3 E");
             rover.Compass.Direction.Should().BeEquivalentTo(Direction.E);
         }
+
+        //[Fact]
+        //public void Rover_should_be_able_to_move()
+        //{
+        //    Rover rover = new Rover("2 3 E");
+        //    rover.RecieveInstructions("M");
+        //    rover.Position.Should().BeEquivalentTo(new Position { X = 3, Y = 3 });
+        //}
     }
 }
