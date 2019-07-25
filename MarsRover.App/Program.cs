@@ -19,8 +19,8 @@ namespace MarsRover.App
                 Position = new Position() { X = rover1X, Y = rover1Y },
                 Map = new Map()
                 {
-                    StartPosition = new Position { X = 0, Y = 0 },
-                    EndPosition = new Position { X = mapEndX, Y = mapEndY }
+                    MinimumCoordinate = new Position { X = 0, Y = 0 },
+                    MaximumCoordinate = new Position { X = mapEndX, Y = mapEndY }
                 },
                 Compass = new Compass() { Direction = rover1Direction }
             };
@@ -30,8 +30,8 @@ namespace MarsRover.App
                 Position = new Position() { X = rover2X, Y = rover2Y },
                 Map = new Map()
                 {
-                    StartPosition = new Position { X = 0, Y = 0 },
-                    EndPosition = new Position { X = mapEndX, Y = mapEndY }
+                    MinimumCoordinate = new Position { X = 0, Y = 0 },
+                    MaximumCoordinate = new Position { X = mapEndX, Y = mapEndY }
                 },
                 Compass = new Compass() { Direction = rover2Direction }
             };

@@ -10,14 +10,14 @@ namespace MarsRover.Tests
         {
             var map = new Map()
             {
-                StartPosition = new Position() { X = 0, Y = 0},
-                EndPosition = new Position() { X = 10, Y = 10}
+                MinimumCoordinate = new Position() { X = 0, Y = 0},
+                MaximumCoordinate = new Position() { X = 10, Y = 10}
             };
 
-            map.StartPosition.X.Should().Be(0);
-            map.StartPosition.Y.Should().Be(0);
-            map.EndPosition.X.Should().Be(10);
-            map.EndPosition.Y.Should().Be(10);
+            map.MinimumCoordinate.X.Should().Be(0);
+            map.MinimumCoordinate.Y.Should().Be(0);
+            map.MaximumCoordinate.X.Should().Be(10);
+            map.MaximumCoordinate.Y.Should().Be(10);
         }
 
         [Theory]
@@ -33,8 +33,8 @@ namespace MarsRover.Tests
         {
             var map = new Map()
             {
-                StartPosition = new Position() { X = 0, Y = 0 },
-                EndPosition = new Position() { X = 10, Y = 10 }
+                MinimumCoordinate = new Position() { X = 0, Y = 0 },
+                MaximumCoordinate = new Position() { X = 10, Y = 10 }
             };
 
             map.IsInVicinity(new Position() { X = x, Y = y })

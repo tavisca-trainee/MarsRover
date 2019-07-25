@@ -53,8 +53,8 @@ namespace MarsRover.Tests
                 Position = new Position() { X = 2, Y = 2 },
                 Map = new Map()
                 {
-                    StartPosition = new Position { X = 0, Y = 0 },
-                    EndPosition = new Position { X = 10, Y = 10 }
+                    MinimumCoordinate = new Position { X = 0, Y = 0 },
+                    MaximumCoordinate = new Position { X = 10, Y = 10 }
                 },
                 Compass = new Compass() { Direction = currentDirection }
             };
@@ -64,7 +64,7 @@ namespace MarsRover.Tests
             instruction.TryProcessing(command, ref rover)
                 .Should().Be(true);
 
-            rover.Compass.Direction.Should().Be(expectedDirection);
+            rover.GetDirection().Should().Be(expectedDirection);
         }
     }
 }

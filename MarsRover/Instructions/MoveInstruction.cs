@@ -9,7 +9,7 @@ namespace MarsRover
             'M', 'F'
         };
 
-        private static Dictionary<char, Step> _move { get; } = new Dictionary<char, Step>()
+        private static Dictionary<char, Step> _directionToStepMap { get; } = new Dictionary<char, Step>()
         {
             {'E', new Step() { X = 1, Y = 0} },
             {'S', new Step() { X = 0, Y = -1} },
@@ -32,7 +32,7 @@ namespace MarsRover
 
         public static void Move(ref Rover rover)
         {
-            Step step = _move[rover.Compass.Direction];
+            Step step = _directionToStepMap[rover.GetDirection()];
 
             var newPosition = new Position()
             {

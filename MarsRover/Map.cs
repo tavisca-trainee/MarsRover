@@ -2,8 +2,8 @@
 {
     public class Map
     {
-        public Position StartPosition { get; set; }
-        public Position EndPosition { get; set; }
+        public Position MinimumCoordinate { get; set; }
+        public Position MaximumCoordinate { get; set; }
 
         public bool IsInVicinity(Position position)
         {
@@ -18,7 +18,7 @@
 
         private bool XInRange(int X)
         {
-            if (StartPosition.X <= X && X <= EndPosition.X)
+            if (MinimumCoordinate.X <= X && X <= MaximumCoordinate.X)
                 return true;
 
             return false;
@@ -26,7 +26,7 @@
 
         private bool YInRange(int Y)
         {
-            if (StartPosition.Y <= Y && Y <= EndPosition.Y)
+            if (MinimumCoordinate.Y <= Y && Y <= MaximumCoordinate.Y)
                 return true;
             
             return false;
