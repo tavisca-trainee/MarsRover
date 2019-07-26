@@ -6,12 +6,12 @@ namespace MarsRover.Tests
     public class RoverFixture
     {
         [Theory]
-        [InlineData(5, 5, 1, 2, Directions.N, "LMLMLMLMM", 0, 1, Directions.S)]
-        [InlineData(5, 5, 3, 3, Directions.E, "MMRMMRMRRM", 4, 2, Directions.W)]
-        [InlineData(5, 5, 2, 2, Directions.E, "RMRRMR", 2, 0, Directions.W)]
-        [InlineData(4, 4, 4, 0, Directions.SE, "LMRMLLRM", 4, 0, Directions.E)]
-        [InlineData(4, 4, 0, 2, Directions.NE, "MMMRMLM", 3, 4, Directions.NE)]
-        [InlineData(1, 1, 0, 0, Directions.W, "RRRMLLMLM", 0, 1, Directions.W)]
+        [InlineData(5, 5, 1, 2, Directions.North, "LMLMLMLMM", 0, 1, Directions.South)]
+        [InlineData(5, 5, 3, 3, Directions.East, "MMRMMRMRRM", 4, 2, Directions.West)]
+        [InlineData(5, 5, 2, 2, Directions.East, "RMRRMR", 2, 0, Directions.West)]
+        [InlineData(4, 4, 4, 0, Directions.SouthEast, "LMRMLLRM", 4, 0, Directions.East)]
+        [InlineData(4, 4, 0, 2, Directions.NorthEast, "MMMRMLM", 3, 4, Directions.NorthEast)]
+        [InlineData(1, 1, 0, 0, Directions.West, "RRRMLLMLM", 0, 1, Directions.West)]
         public void Rover_test_final_integration(int mapEndX, int mapEndY, int roverX, int roverY, Directions roverDirection, string roverCommand, int expectedRoverX, int expectedRoverY, Directions expectedRoverDirction)
         {
             var rover = new Rover();

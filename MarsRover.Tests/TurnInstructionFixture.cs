@@ -38,14 +38,14 @@ namespace MarsRover.Tests
         }
 
         [Theory]
-        [InlineData(Directions.E, 'L', Directions.NE)]
-        [InlineData(Directions.E, 'R', Directions.SE)]
-        [InlineData(Directions.W, 'L', Directions.SW)]
-        [InlineData(Directions.W, 'R', Directions.NW)]
-        [InlineData(Directions.N, 'L', Directions.NW)]
-        [InlineData(Directions.N, 'R', Directions.NE)]
-        [InlineData(Directions.S, 'L', Directions.SE)]
-        [InlineData(Directions.S, 'R', Directions.SW)]
+        [InlineData(Directions.East, 'L', Directions.NorthEast)]
+        [InlineData(Directions.East, 'R', Directions.SouthEast)]
+        [InlineData(Directions.West, 'L', Directions.SouthWest)]
+        [InlineData(Directions.West, 'R', Directions.NorthWest)]
+        [InlineData(Directions.North, 'L', Directions.NorthWest)]
+        [InlineData(Directions.North, 'R', Directions.NorthEast)]
+        [InlineData(Directions.South, 'L', Directions.SouthEast)]
+        [InlineData(Directions.South, 'R', Directions.SouthWest)]
         public void Valid_move_command_should_turn_rover_test(Directions currentDirection, char command, Directions expectedDirection)
         {
             var rover = new Rover()

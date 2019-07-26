@@ -2,9 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <RootNamespace>MarsRover.Tests</RootNamespace>
+    <RootNamespace>MarsRover8-Direction.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>MarsRover8-Direction.Tests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

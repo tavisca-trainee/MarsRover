@@ -10,10 +10,10 @@ namespace MarsRover.Tests
         {
             var compass = new Compass()
             {
-                Direction = Directions.E
+                Direction = Directions.East
             };
 
-            compass.Direction.Should().Be(Directions.E);
+            compass.Direction.Should().Be(Directions.East);
 
         }
     }

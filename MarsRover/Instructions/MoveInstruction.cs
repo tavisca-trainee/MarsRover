@@ -11,14 +11,14 @@ namespace MarsRover
 
         private static Dictionary<Directions, Step> _directionToStepMap { get; } = new Dictionary<Directions, Step>()
         {
-            {Directions.E, new Step() { X = 1, Y = 0} },
-            {Directions.S, new Step() { X = 0, Y = -1} },
-            {Directions.W, new Step() { X = -1, Y = 0} },
-            {Directions.N, new Step() { X = 0, Y = 1} },
-            {Directions.NE, new Step() { X = 1, Y = 1} },
-            {Directions.SE, new Step() { X = 1, Y = -1} },
-            {Directions.NW, new Step() { X = -1, Y = 1} },
-            {Directions.SW, new Step() { X = -1, Y = -1} },
+            {Directions.East, new Step() { X = 1, Y = 0} },
+            {Directions.South, new Step() { X = 0, Y = -1} },
+            {Directions.West, new Step() { X = -1, Y = 0} },
+            {Directions.North, new Step() { X = 0, Y = 1} },
+            {Directions.NorthEast, new Step() { X = 1, Y = 1} },
+            {Directions.SouthEast, new Step() { X = 1, Y = -1} },
+            {Directions.NorthWest, new Step() { X = -1, Y = 1} },
+            {Directions.SouthWest, new Step() { X = -1, Y = -1} },
         };
 
         public bool TryProcessing(char command, ref Rover rover)
